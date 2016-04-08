@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <script type="text/javascript" src="../JavaScript/jquery-1.11.3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="../JavaScript/gojworld.js" charset="utf-8"></script>
+<script type="text/javascript" src="../JavaScript/jquery.fn.js" charset="utf-8"></script>
+<script type="text/javascript" src="../JavaScript/common.js" charset="utf-8"></script>
 <title>Insert title here</title>
 <script>
 	$( document ).ready( function () {
 		$( ".tt" ).click( function () {
 			$.gojworld.alert();
 			$.gojworld.console();
+			$.comm.bindEvent( target );
 		} );
+		comm.bindEvent();
+		comm.init();
 	} );
 </script>
 </head>
@@ -28,6 +33,7 @@
 	<br />
 	<div>
 		<span class="tt">aaaaaaa</span>
+		<strong class="MASK_CURRENCY">1000000</strong>
 	</div>
 </body>
 </html>
