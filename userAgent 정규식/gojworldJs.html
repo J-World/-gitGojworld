@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="../JavaScript/jquery-1.11.3.min.js" charset="utf-8"></script>
+<title>Insert title here</title>
+<script>
+	$( document ).ready( function () {} );
+</script>
+</head>
+<body>
+	<div>
+		<h1>Split Method 1</h1>
+		<p>abc,def,ghi</p>
+		<script>
+			var jbString = 'abc,def,ghi';
+			var jbSplit = jbString.split( ',' ,3 );
+			for ( var i in jbSplit ) {
+				document.write( '<p>' + jbSplit[ i ] + '</p>' );
+			}
+		</script>
+	</div>
+	<br />
+	<span>ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</span>
+	<br />
+	<div>
+		<h1>Split Method 2</h1>
+		<p>#hallaweb#2#</p>
+		<script>
+			var jbString = '#hallaweb#2#';
+			var jbSplit = jbString.split( '#' ,3 );
+			$( document ).ready( function () {
+				$( ".ab" ).text( jbSplit[ 2 ] );
+			} );
+		</script>
+		<span class="ab">aasasdas</span>
+	</div>
+	<br />
+	<span>ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</span>
+	<br />
+	<div>
+		<h1>Search</h1>
+		<p class="text">456245623456234512wrjthwuiorhfuwehfuwsdhfu  12312423464564564523452sdfgdfgasdfgasdfgafgasdf</p>
+		<script>
+			$( document ).ready( function () {
+				var text = $( ".text" ).text()
+				console.log(text.replace(/(.+)?\#hallaweb\#([0-9]+)\#(.+)?/gi,"$2"));
+				
+				
+				// ? -> 있을수도 있고 없을수도 있다
+				// (.+) -> 모든 문자열 
+				// # -> 특수문자 앞에는 \# 역슬래쉬를 붙여주어야 한다
+				// ([0-9])  숫자0-9이고 ([0-9]+) 플러스를 붙여주면 숫자가 증가되도(2자리) 똑같이 인식한다.
+				// gi -> 전체에서 찾는거 global
+				// $2 -> (.+)앞뒤로 있으니 1부터 시작으로 2번째 요소를 가르킨다
+				// 
+				// 
+				// 
+			} );
+		</script>
+		<span class="abc">aasasdas</span>
+	</div>
+</body>
+</html>
